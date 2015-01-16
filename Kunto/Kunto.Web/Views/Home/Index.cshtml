@@ -1,8 +1,17 @@
 ﻿@model dynamic
 
 @{
-    ViewBag.Title = "title";
-    Layout = null;
+    ViewBag.Title = "ASP.NET Events";
 }
 
-<h2>Kunto Application</h2>
+<div class="panel panel-primary">
+    <h5 class="panel-heading">Events</h5>
+    <table class="table table-condensed table-striped">
+        @foreach (string eventName in Model)
+        {
+            <tr>
+                <td>@eventName</td>
+            </tr>
+        }
+    </table>
+</div>

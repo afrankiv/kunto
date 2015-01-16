@@ -14,7 +14,7 @@ namespace Kunto.Web.Controllers
         /// </returns>
         public ActionResult Index()
         {
-            return this.View();
+            return View(HttpContext.Application["events"]);
         }
 
         #endregion
