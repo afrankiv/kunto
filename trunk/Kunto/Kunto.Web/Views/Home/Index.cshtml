@@ -5,6 +5,60 @@
 }
 
 <div class="panel panel-primary">
+    <h5 class="panel-heading">Request Properties</h5>
+    <table class="table table-condensed table-striped">
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>HttpMethod</td>
+            <td>@Request.HttpMethod</td>
+        </tr>
+        <tr>
+            <td>IsLocal</td>
+            <td>@Request.IsLocal</td>
+        </tr>
+        <tr>
+            <td>RawURL</td>
+            <td>@Request.RawUrl</td>
+        </tr>
+        <tr>
+            <td>Headers</td>
+            <td>@Request.Headers.ToString()</td>
+        </tr>
+        <tr>
+            <td>AcceptTypes</td>
+            <td>@Request.AcceptTypes</td>
+        </tr>
+        <tr>
+            <td>Browser</td>
+            <td>@Request.Browser.Id</td>
+        </tr>
+        <tr>
+            <td>ContentLength</td>
+            <td>@Request.ContentLength</td>
+        </tr>
+        <tr>
+            <td>UserAgent</td>
+            <td>@Request.UserAgent</td>
+        </tr>
+        <tr>
+            <td>UserHostAddress</td>
+            <td>@Request.UserHostAddress</td>
+        </tr>
+        <tr>
+            <td>UserHostName</td>
+            <td>@Request.UserHostName</td>
+        </tr>
+        <tr>
+            <td>UserLanguages</td>
+            <td>@Request.UserLanguages</td>
+        </tr>
+    </table>
+</div>
+
+<div class="panel panel-primary">
     <h5 class="panel-heading">Events</h5>
     <table class="table table-condensed table-striped">
         @foreach (string eventName in Model)
@@ -15,3 +69,4 @@
         }
     </table>
 </div>
+

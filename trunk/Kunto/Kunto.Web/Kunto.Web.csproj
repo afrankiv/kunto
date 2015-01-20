@@ -115,6 +115,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\Infrustructure\TimerModule.cs" />
+    <Compile Include="Samples\Infrustructure\TotalTimeModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
