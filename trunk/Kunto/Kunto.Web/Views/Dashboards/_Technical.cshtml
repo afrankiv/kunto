@@ -3,18 +3,35 @@
         <div class="col-md-12 kunto-area kunto-area-wrapper">
             Web UI
             <div class="row clearfix">
-                <div class="col-md-4 kunto-area">
-                    <span>HTML</span>
+                <div class="col-md-3 kunto-area">
                     <div>
-                        <span>4 years</span>
-                        <div class="kunto-rate"></div>
+                        <div class="kunto-area-html-icon"></div>
+                        <div style="float: left; margin-left: 15px;">
+                            <div>HTML/HTML5</div>
+                            <div>2 years</div>
+                        </div>
                     </div>
+                    <div class="kunto-rate"></div>
                 </div>
-                <div class="col-md-2 kunto-area">
-                    <span>CSS</span>
+                <div class="col-md-3 kunto-area">
+                    <div>
+                        <div class="kunto-area-css-icon"></div>
+                        <div style="float: left; margin-left: 15px;">
+                            <div>CSS</div>
+                            <div>2 years</div>
+                        </div>
+                    </div>
+                    <div class="kunto-rate"></div>
                 </div>
                 <div class="col-md-6 kunto-area">
-                    <span>JavaScript</span>
+                    <div>
+                        <div class="kunto-area-js-icon"></div>
+                        <div style="float: left; margin-left: 15px;">
+                            <div>JavaScript</div>
+                            <div>4 years</div>
+                        </div>
+                    </div>
+                    <div class="kunto-rate"></div>
                 </div>
             </div>
         </div>
@@ -23,35 +40,62 @@
         <div class="col-md-12 kunto-area kunto-area-wrapper">
             C#/.NET
             <div class="row clearfix">
-                <div class="col-md-4 kunto-area kunto-area-wrapper">
-                    ASP.NET
+                <div class="col-md-8 kunto-area kunto-area-wrapper">
+                    <div class="row clearfix">
+                        <div class="col-md-6 kunto-area kunto-area-wrapper">
+                            ASP.NET
                     <div class="row clearfix">
                         <div class="col-md-12 kunto-area">
                             <span>ASP.NET MVC</span>
                             <div class="kunto-rate"></div>
                         </div>
                     </div>
-                    <div class="row clearfix">
-                        <div class="col-md-12 kunto-area">
-                            Web API
+                            <div class="row clearfix">
+                                <div class="col-md-12 kunto-area">
+                                    <div>
+                                        <div class="kunto-area-webapi-icon"></div>
+                                        <div style="float: left; margin-left: 15px;">
+                                            <div>WEB API</div>
+                                            <div>2 years</div>
+                                        </div>
+                                    </div>
+                                    <div class="kunto-rate"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 kunto-area kunto-area-wrapper">
+                            <div class="row clearfix">
+                                <div class="col-md-12 kunto-area">
+                                    <div>
+                                        <div class="kunto-area-silverlight-icon"></div>
+                                        <div style="float: left; margin-left: 15px;">
+                                            <div>Silverlight</div>
+                                            <div>4 years</div>
+                                        </div>
+                                    </div>
+                                    <div class="kunto-rate"></div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-12 kunto-area">
+                                    WPF
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-12 kunto-area">
+                                    Win Forms
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-4 kunto-area kunto-area-wrapper">
                     <div class="row clearfix">
-                        <div class="col-md-12 kunto-area">
-                            Silverlight
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-md-12 kunto-area">
-                            WPF
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-md-12 kunto-area">
-                            Win Forms
+                        <div class="col-md-12 kunto-area kunto-area-wrapper">
+                            ADO.NET
+                                <div class="row clearfix">
+                                    <div class="col-md-12 kunto-area">
+                                        Entity Framework
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -76,32 +120,16 @@
             SQL
             <div class="row clearfix">
                 <div class="col-md-6 kunto-area">
-                    MS Server
+                    MS SQL
                 </div>
                 <div class="col-md-6 kunto-area">
                     MySql
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 <script>
     $(document).ready(function () {
-
-        var colors = ["#0096A9", "#BB7ABE", "#ED714E", "#3FA5C1", "#C19E72", "#7CC1A5", "#BF9695", "#BCB962", "#B6A7BA"];
-
-        function getRandomColor() {
-            var color = colors[Math.floor(Math.random() * colors.length)];
-            var index = colors.indexOf(color);
-            if (index > -1) {
-                colors.splice(index, 1);
-            }
-            return color;
-        };
-
-        $('.kunto-area-wrapper').each(function () {
-            $(this).css({ backgroundColor: getRandomColor() });
-        });
     });
 </script>
