@@ -95,6 +95,7 @@
     <Content Include="Content\images\bx_loader.gif" />
     <Content Include="Content\images\controls.png" />
     <Content Include="Content\images\css.png" />
+    <Content Include="Content\images\guru.png" />
     <Content Include="Content\images\html.png" />
     <Content Include="Content\images\js.png" />
     <Content Include="Content\images\silverlight.png" />

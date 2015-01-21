@@ -12,9 +12,18 @@ body {
 .navbar-form .form-control {
     height: 32px;
 }
-
+.navbar-brand {
+    padding: 5px 15px;
+}
 .kunto-app {
     padding-top: 10px;
+}
+
+.kunto-logo {
+    background-image: url(../images/guru.png);
+    width: 32px;
+    height: 32px;
+    float: left;
 }
 
 .kunto-dashboard {
