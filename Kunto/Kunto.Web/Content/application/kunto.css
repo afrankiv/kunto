@@ -1,0 +1,29 @@
+﻿html, body {
+}
+
+.container {
+}
+
+body {
+    background-color: rgb(66, 153, 66);
+}
+
+.kunto-app {
+    padding-top: 20px;
+}
+
+.kunto-dashboard {
+}
+
+.kunto-area {
+    background-color: lightskyblue;
+    min-height: 55px;
+}
+
+    .kunto-area .kunto-area {
+        padding: 25px;
+    }
+
+.bx-viewport {
+    height: auto !important;
+}

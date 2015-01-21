@@ -4,46 +4,85 @@ using System.Web;
 
 namespace Kunto.Web.Samples.Infrustructure
 {
+    /// <summary>
+    /// </summary>
     public class RequestTimerEventArgs : EventArgs
     {
+        #region Public Properties
+
+        /// <summary>
+        /// </summary>
         public float Duration { get; set; }
+
+        #endregion
     }
 
+    /// <summary>
+    /// </summary>
     public class TimerModule : IHttpModule
     {
-        public event EventHandler<RequestTimerEventArgs> RequestTimed;
+        #region Fields
+
+        /// <summary>
+        /// </summary>
         private Stopwatch timer;
 
-        public void Init(HttpApplication app)
-        {
-            app.BeginRequest += HandleEvent;
-            app.EndRequest += HandleEvent;
-        }
+        #endregion
 
-        private void HandleEvent(object src, EventArgs args)
-        {
-            HttpContext ctx = HttpContext.Current;
-            if (ctx.CurrentNotification == RequestNotification.BeginRequest)
-            {
-                timer = Stopwatch.StartNew();
-            }
-            else
-            {
-                float duration = ((float)timer.ElapsedTicks) / Stopwatch.Frequency;
-                ctx.Response.Write(string.Format(
-                    "<div class='alert alert-success'>Elapsed: {0:F5} seconds</div>",
-                    duration));
-                if (RequestTimed != null)
-                {
-                    RequestTimed(this,
-                        new RequestTimerEventArgs { Duration = duration });
-                }
-            }
-        }
+        #region Public Events
 
+        /// <summary>
+        /// </summary>
+        public event EventHandler<RequestTimerEventArgs> RequestTimed;
+
+        #endregion
+
+        #region Public Methods and Operators
+
+        /// <summary>
+        /// </summary>
         public void Dispose()
         {
             // do nothing - no resources to release
         }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="app">
+        /// </param>
+        public void Init(HttpApplication app)
+        {
+            app.BeginRequest += this.HandleEvent;
+            app.EndRequest += this.HandleEvent;
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// </summary>
+        /// <param name="src">
+        /// </param>
+        /// <param name="args">
+        /// </param>
+        private void HandleEvent(object src, EventArgs args)
+        {
+            HttpContext ctx = HttpContext.Current;
+            if (ctx.CurrentNotification == RequestNotification.BeginRequest){
+                this.timer = Stopwatch.StartNew();
+            }
+            else{
+                float duration = ((float)this.timer.ElapsedTicks) / Stopwatch.Frequency;
+                ctx.Response.Write(
+                    string.Format("<div class='alert alert-success'>Elapsed: {0:F5} seconds</div>", 
+                        duration));
+                if (this.RequestTimed != null){
+                    this.RequestTimed(this, new RequestTimerEventArgs { Duration = duration });
+                }
+            }
+        }
+
+        #endregion
     }
 }
