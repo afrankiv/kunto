@@ -1,37 +1,44 @@
-﻿<div class="container-fluid">
+﻿<div class="container-fluid kunto-dashboard">
     <div class="row clearfix">
-        <div class="col-md-4 kunto-area">
-            HTML
-        </div>
-        <div class="col-md-2 kunto-area">
-            CSS
-        </div>
-        <div class="col-md-6 kunto-area">
-            JavaScript
+        <div class="col-md-12 kunto-area kunto-area-wrapper">
+            Web UI
+            <div class="row clearfix">
+                <div class="col-md-4 kunto-area">
+                    <span>HTML</span>
+                    <div>
+                        <span>4 years</span>
+                        <div class="kunto-rate"></div>
+                    </div>
+                </div>
+                <div class="col-md-2 kunto-area">
+                    <span>CSS</span>
+                </div>
+                <div class="col-md-6 kunto-area">
+                    <span>JavaScript</span>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row clearfix">
-        <div class="col-md-12 kunto-area">
-            C#
+        <div class="col-md-12 kunto-area kunto-area-wrapper">
+            C#/.NET
             <div class="row clearfix">
-                <div class="col-md-4 kunto-area">
+                <div class="col-md-4 kunto-area kunto-area-wrapper">
+                    ASP.NET
                     <div class="row clearfix">
                         <div class="col-md-12 kunto-area">
-                            ASP.NET
-                            <div class="row clearfix">
-                                <div class="col-md-12 kunto-area">
-                                    ASP.NET MVC
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-12 kunto-area">
-                                    Web API
-                                </div>
-                            </div>
+                            <span>ASP.NET MVC</span>
+                            <div class="kunto-rate"></div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-12 kunto-area">
+                            Web API
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 kunto-area">
+
+                <div class="col-md-4 kunto-area kunto-area-wrapper">
                     <div class="row clearfix">
                         <div class="col-md-12 kunto-area">
                             Silverlight
@@ -48,7 +55,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 kunto-area">
+                <div class="col-md-4 kunto-area kunto-area-wrapper">
+                    .NET Libs and Frameworks
+                    <div class="row clearfix">
+                        <div class="col-md-12 kunto-area">
+                            PRISM
+                        </div>
+                    </div>
                     <div class="row clearfix">
                         <div class="col-md-12 kunto-area">
                             Enterprise Library
@@ -59,7 +72,7 @@
         </div>
     </div>
     <div class="row clearfix">
-        <div class="col-md-8 kunto-area">
+        <div class="col-md-12 kunto-area kunto-area-wrapper">
             SQL
             <div class="row clearfix">
                 <div class="col-md-6 kunto-area">
@@ -70,23 +83,24 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 kunto-area">
-            MongoDB
-        </div>
+
     </div>
 </div>
 <script>
     $(document).ready(function () {
+
+        var colors = ["#0096A9", "#BB7ABE", "#ED714E", "#3FA5C1", "#C19E72", "#7CC1A5", "#BF9695", "#BCB962", "#B6A7BA"];
+
         function getRandomColor() {
-            var letters = '0123456789ABCDEF'.split('');
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
+            var color = colors[Math.floor(Math.random() * colors.length)];
+            var index = colors.indexOf(color);
+            if (index > -1) {
+                colors.splice(index, 1);
             }
             return color;
         };
 
-        $('.kunto-area').each(function () {
+        $('.kunto-area-wrapper').each(function () {
             $(this).css({ backgroundColor: getRandomColor() });
         });
     });

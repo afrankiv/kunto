@@ -5,23 +5,51 @@
 }
 
 body {
-    background-color: rgb(66, 153, 66);
+    padding-top: 0px;
+    background: #F9F9F9;
+}
+
+.navbar-form .form-control {
+    height: 32px;
 }
 
 .kunto-app {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .kunto-dashboard {
 }
 
-.kunto-area {
-    background-color: lightskyblue;
-    min-height: 55px;
+.kunto-rate {
+    background-image: url(../images/star.png);
+    height: 16px;
+    width: 48px;
+    float: right;
 }
 
+.kunto-area {
+    min-height: 30px;
+    color: white;
+    border: 3px solid white;
+}
+
+    .kunto-area:hover {
+        cursor: pointer;
+    }
+
+    .container-fluid .kunto-area,
     .kunto-area .kunto-area {
         padding: 25px;
+    }
+
+.kunto-area-wrapper .kunto-area,
+.kunto-area-wrapper + .kunto-area {
+    background-color: #7DC16C;
+}
+
+    .kunto-area-wrapper .kunto-area:hover,
+    .kunto-area-wrapper + .kunto-area:hover {
+        background-color: #93BC89;
     }
 
 .bx-viewport {

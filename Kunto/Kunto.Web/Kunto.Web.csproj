@@ -94,6 +94,7 @@
     <Content Include="Content\bootswatch.min.css" />
     <Content Include="Content\images\bx_loader.gif" />
     <Content Include="Content\images\controls.png" />
+    <Content Include="Content\images\star.png" />
     <Content Include="Content\jquery.bxslider.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -112,7 +113,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
