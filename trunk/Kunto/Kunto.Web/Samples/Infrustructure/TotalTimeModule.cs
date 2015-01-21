@@ -2,31 +2,66 @@
 using System.Web;
 using System.Web.UI;
 
-namespace Kunto.Web.Samples.Infrustructure {
-    public class TotalTimeModule : IHttpModule {
-        private static float totalTime = 0;
+namespace Kunto.Web.Samples.Infrustructure
+{
+    /// <summary>
+    /// </summary>
+    public class TotalTimeModule : IHttpModule
+    {
+        #region Static Fields
+
+        /// <summary>
+        /// </summary>
         private static int requestCount = 0;
 
-        public void Init(HttpApplication app) {
+        /// <summary>
+        /// </summary>
+        private static float totalTime = 0;
+
+        #endregion
+
+        #region Public Methods and Operators
+
+        /// <summary>
+        /// </summary>
+        public void Dispose()
+        {
+            // do nothing
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="app">
+        /// </param>
+        public void Init(HttpApplication app)
+        {
             IHttpModule module = app.Modules["Timer"];
-            if (module != null && module is TimerModule) {
+
+            if (module != null && module is TimerModule){
                 TimerModule timerModule = (TimerModule)module;
-                timerModule.RequestTimed += (src, args) => {
+                timerModule.RequestTimed += (src, args) =>{
                     totalTime += args.Duration;
                     requestCount++;
                 };
             }
 
-            app.EndRequest += (src, args) => {
-                app.Context.Response.Write(CreateSummary());
-            };
+            app.EndRequest += (src, args) => { app.Context.Response.Write(this.CreateSummary()); };
         }
 
-        private string CreateSummary() {
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// </summary>
+        /// <returns>
+        /// </returns>
+        private string CreateSummary()
+        {
             StringWriter stringWriter = new StringWriter();
             HtmlTextWriter htmlWriter = new HtmlTextWriter(stringWriter);
-            htmlWriter.AddAttribute(HtmlTextWriterAttribute.Class,
-                "table table-bordered");
+
+            htmlWriter.AddAttribute(HtmlTextWriterAttribute.Class, "table table-bordered");
             htmlWriter.RenderBeginTag(HtmlTextWriterTag.Table);
             htmlWriter.AddAttribute(HtmlTextWriterAttribute.Class, "success");
             htmlWriter.RenderBeginTag(HtmlTextWriterTag.Tr);
@@ -50,8 +85,6 @@ namespace Kunto.Web.Samples.Infrustructure {
             return stringWriter.ToString();
         }
 
-        public void Dispose() {
-            // do nothing
-        }
+        #endregion
     }
 }

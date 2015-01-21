@@ -1,0 +1,93 @@
+﻿<div class="container-fluid">
+    <div class="row clearfix">
+        <div class="col-md-4 kunto-area">
+            HTML
+        </div>
+        <div class="col-md-2 kunto-area">
+            CSS
+        </div>
+        <div class="col-md-6 kunto-area">
+            JavaScript
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-md-12 kunto-area">
+            C#
+            <div class="row clearfix">
+                <div class="col-md-4 kunto-area">
+                    <div class="row clearfix">
+                        <div class="col-md-12 kunto-area">
+                            ASP.NET
+                            <div class="row clearfix">
+                                <div class="col-md-12 kunto-area">
+                                    ASP.NET MVC
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-12 kunto-area">
+                                    Web API
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 kunto-area">
+                    <div class="row clearfix">
+                        <div class="col-md-12 kunto-area">
+                            Silverlight
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-12 kunto-area">
+                            WPF
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-12 kunto-area">
+                            Win Forms
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 kunto-area">
+                    <div class="row clearfix">
+                        <div class="col-md-12 kunto-area">
+                            Enterprise Library
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-md-8 kunto-area">
+            SQL
+            <div class="row clearfix">
+                <div class="col-md-6 kunto-area">
+                    MS Server
+                </div>
+                <div class="col-md-6 kunto-area">
+                    MySql
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 kunto-area">
+            MongoDB
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        };
+
+        $('.kunto-area').each(function () {
+            $(this).css({ backgroundColor: getRandomColor() });
+        });
+    });
+</script>
