@@ -11,7 +11,7 @@
                 </button>
                 <div class="navbar-brand" style="font-weight: bold">
                     <span class="kunto-logo"></span>
-                    <span style="font-weight: bold; line-height: 1.4em;"> IT Guru Profile</span>
+                    <span style="font-weight: bold; line-height: 1.4em;">IT Guru Builder</span>
                 </div>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,6 +23,8 @@
                     <button type="submit" class="btn btn-default">Search</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Tasks Scheduler</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Menu <span class="caret"></span>
                         </a>
@@ -30,6 +32,7 @@
                             <li><a href="#">Login</a></li>
                             <li><a href="#">Register</a></li>
                             <li class="divider"></li>
+                            <li><a href="#">Create Profile</a></li>
                             <li><a href="#">Settings</a></li>
                         </ul>
                     </li>
@@ -46,11 +49,14 @@
                 <h4 class="kunto-title">Languages and Technologies Dashboard</h4>
                 @Html.Partial("~/Views/Dashboards/_Technical.cshtml")
             </li>
-            <li>Skills Dashboard
+            <li>
+                <h4 class="kunto-title">Skills Dashboard</h4>
             </li>
-            <li>Interests Dashboard
+            <li>
+                <h4 class="kunto-title">Interests Dashboard</h4>
             </li>
-            <li>Languages Dashboard
+            <li>
+                <h4 class="kunto-title">Foreign Languages Dashboard</h4>
             </li>
         </ul>
     </div>
