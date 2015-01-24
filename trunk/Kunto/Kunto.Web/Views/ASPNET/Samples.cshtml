@@ -10,12 +10,13 @@
 
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="id-aspnet-lifecycle-events">
-             @Html.Action("Events", "ASPNET");
+             @Html.Action("Events", "ASPNET")
         </div>
         <div  role="tabpanel" class="tab-pane" id="id-aspnet-request-properties">
             @Html.Partial("~/Views/ASPNET/_RequestResponseProperties.cshtml")
         </div>
-        <div  role="tabpanel" class="tab-pane" id="id-aspnet-default-modules">
+        <div role="tabpanel" class="tab-pane" id="id-aspnet-default-modules">
+             @Html.Action("Modules", "ASPNET")
         </div>
     </div>
 </div>

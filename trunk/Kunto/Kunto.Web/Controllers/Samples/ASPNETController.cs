@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace Kunto.Web.Controllers.Samples
 {
@@ -16,7 +18,7 @@ namespace Kunto.Web.Controllers.Samples
         {
             return View(HttpContext.Application["events"]);
         }
-        
+
         /// <summary>
         /// </summary>
         /// <returns>
@@ -24,6 +26,21 @@ namespace Kunto.Web.Controllers.Samples
         public ActionResult Samples()
         {
             return View();
+        }
+
+        public ActionResult Modules()
+        {
+            var modules = HttpContext.ApplicationInstance.Modules;
+
+            Tuple<string, string>[] data =
+                modules.AllKeys
+                    .Select(x => new Tuple<string, string>(
+                        x.StartsWith("__Dynamic") ? x.Split('_', ',')[3] : x,
+                        modules[x].GetType().Name))
+                    .OrderBy(x => x.Item1)
+                    .ToArray();
+
+            return View(data);
         }
 
         #endregion

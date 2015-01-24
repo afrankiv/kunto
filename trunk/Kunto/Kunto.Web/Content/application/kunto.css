@@ -76,6 +76,11 @@
         width: 130px;
     }
 
+    .knt-dashboard-icon.knt-aspmvc-icon {
+        background-position: -350px 0px;
+        width: 178px;
+    }
+
 .knt-area {
     min-height: 30px;
     color: white;
