@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "ASP.NET Samples";
+}
+<div role="tabpanel">
+    <ul class="nav nav-tabs" id="id-knt-tabpane-samples"  role="tablist">
+        <li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#id-aspnet-lifecycle-events">Life Cycle Events</a></li>
+        <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-request-properties">Request/Response Properties</a></li>
+        <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-default-modules">Default Modules</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="id-aspnet-lifecycle-events">
+             @Html.Action("Events", "ASPNET");
+        </div>
+        <div  role="tabpanel" class="tab-pane" id="id-aspnet-request-properties">
+            @Html.Partial("~/Views/ASPNET/_RequestResponseProperties.cshtml")
+        </div>
+        <div  role="tabpanel" class="tab-pane" id="id-aspnet-default-modules">
+        </div>
+    </div>
+</div>
+<script>
+
+    $('id-knt-tabpane-samples').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+
+</script>

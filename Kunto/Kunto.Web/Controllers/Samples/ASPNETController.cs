@@ -12,9 +12,18 @@ namespace Kunto.Web.Controllers.Samples
         /// </summary>
         /// <returns>
         /// </returns>
-        public ActionResult Index()
+        public ActionResult Events()
         {
             return View(HttpContext.Application["events"]);
+        }
+        
+        /// <summary>
+        /// </summary>
+        /// <returns>
+        /// </returns>
+        public ActionResult Samples()
+        {
+            return View();
         }
 
         #endregion
