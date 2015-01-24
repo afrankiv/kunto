@@ -12,107 +12,149 @@ body {
 .navbar-form .form-control {
     height: 32px;
 }
+
 .navbar-brand {
     padding: 5px 15px;
 }
-.kunto-app {
+
+.knt-app {
     padding-top: 10px;
 }
 
-.kunto-logo {
+.knt-logo {
     background-image: url(../images/guru.png);
     width: 32px;
     height: 32px;
     float: left;
 }
 
-.kunto-dashboard {
+.knt-dashboard {
 }
 
-.kunto-title {
+.knt-title {
     font-weight: bold;
     color: #4E5D6C;
     text-align: center;
 }
 
-.kunto-rate {
+.knt-link,
+.knt-link:hover {
+    color: white;
+}
+
+.knt-rate {
     background-image: url(../images/star.png);
     height: 16px;
     width: 48px;
     float: right;
 }
 
-.kunto-area-js-icon {
+.knt-area-js-icon {
     background-image: url(../images/js.png);
     height: 41px;
     width: 32px;
     float: left;
 }
 
-.kunto-area-html-icon {
+.knt-area-html-icon {
     background-image: url(../images/html.png);
     height: 41px;
     width: 32px;
     float: left;
 }
 
-.kunto-area-css-icon {
+.knt-area-css-icon {
     background-image: url(../images/css.png);
     height: 41px;
     width: 32px;
     float: left;
 }
 
-.kunto-area-silverlight-icon {
+.knt-area-silverlight-icon {
     background-image: url(../images/silverlight.png);
     height: 31px;
     width: 31px;
     float: left;
 }
 
-.kunto-area-webapi-icon {
+.knt-area-webapi-icon {
     background-image: url(../images/webapi.png);
     height: 42px;
     width: 54px;
     float: left;
 }
 
-.kunto-area {
+.knt-area-aspnet-icon {
+    background-image: url(../images/aspnet.png);
+    height: 42px;
+    width: 130px;
+    float: left;
+}
+
+.knt-area {
     min-height: 30px;
     color: white;
     border: 3px solid white;
 }
 
-    .kunto-area:hover {
+    .knt-area:hover {
         cursor: pointer;
     }
 
-    .container-fluid .kunto-area,
-    .kunto-area .kunto-area {
+    .container-fluid .knt-area,
+    .knt-area .knt-area {
         padding: 10px 25px;
         font-weight: bold;
     }
 
-.kunto-area-wrapper {
+.knt-area-2lvl {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.knt-area-wrapper {
     background-color: lightgrey;
     color: #4E5D6C;
 }
 
-    .kunto-area-wrapper .kunto-area-wrapper.kunto-area {
+    .knt-area-wrapper .knt-area-wrapper.knt-area {
         background-color: #90a3b5;
         color: white;
     }
 
-    .kunto-area-wrapper .kunto-area,
-    .kunto-area-wrapper + .kunto-area {
+    .knt-area-wrapper .knt-area,
+    .knt-area-wrapper + .knt-area {
         background-color: #4E5D6C;
     }
 
-        .kunto-area-wrapper .kunto-area:hover,
-        .kunto-area-wrapper + .kunto-area:hover {
+        .knt-area-wrapper .knt-area:hover,
+        .knt-area-wrapper + .knt-area:hover {
             background-color: #9aa8b5;
         }
 
 .bx-viewport {
     height: auto !important;
+}
+
+.nav-tabs > li > a {
+    background-color: #90a3b5;
+}
+
+.panel {
+    background-color: #ffffff;
+    color: #4E5D6C;
+}
+
+.panel-primary > .panel-heading {
+    color: #ffffff;
+    background-color: #4E5D6C;
+    border-color: #ffffff;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: 1px solid lightgrey;
+}
+
+.table-striped > tbody > tr:nth-child(odd) {
+    background-color: #F9F9F9;
 }
