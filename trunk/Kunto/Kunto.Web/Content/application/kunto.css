@@ -4,19 +4,6 @@
 .container {
 }
 
-body {
-    padding-top: 0px;
-    background: #F9F9F9;
-}
-
-.navbar-form .form-control {
-    height: 32px;
-}
-
-.navbar-brand {
-    padding: 5px 15px;
-}
-
 .knt-app {
     padding-top: 10px;
 }
@@ -35,11 +22,6 @@ body {
     font-weight: bold;
     color: #4E5D6C;
     text-align: center;
-}
-
-.knt-link,
-.knt-link:hover {
-    color: white;
 }
 
 .knt-rate {
@@ -118,43 +100,20 @@ body {
 }
 
     .knt-area-wrapper .knt-area-wrapper.knt-area {
-        background-color: #90a3b5;
+        background-color: #888888;
         color: white;
     }
 
     .knt-area-wrapper .knt-area,
     .knt-area-wrapper + .knt-area {
-        background-color: #4E5D6C;
+        background-color: #555555;
     }
 
         .knt-area-wrapper .knt-area:hover,
         .knt-area-wrapper + .knt-area:hover {
-            background-color: #9aa8b5;
+            background-color: #999999;
         }
 
 .bx-viewport {
     height: auto !important;
-}
-
-.nav-tabs > li > a {
-    background-color: #90a3b5;
-}
-
-.panel {
-    background-color: #ffffff;
-    color: #4E5D6C;
-}
-
-.panel-primary > .panel-heading {
-    color: #ffffff;
-    background-color: #4E5D6C;
-    border-color: #ffffff;
-}
-
-.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-    border-top: 1px solid lightgrey;
-}
-
-.table-striped > tbody > tr:nth-child(odd) {
-    background-color: #F9F9F9;
 }
