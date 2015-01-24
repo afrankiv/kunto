@@ -9,13 +9,23 @@
 }
 
 .knt-logo {
-    background-image: url(../images/guru.png);
     width: 32px;
     height: 32px;
     float: left;
+    background-position: 0px -43px;
+    margin-top: -5px;
 }
 
 .knt-dashboard {
+}
+
+.knt-dashboard-domain {
+}
+
+.knt-dashboard-subdomain {
+}
+
+.knt-dashboard-unit {
 }
 
 .knt-title {
@@ -25,58 +35,51 @@
 }
 
 .knt-rate {
-    background-image: url(../images/star.png);
+    background-position: 0px -77px;
+    background-repeat: repeat-x;
     height: 16px;
-    width: 48px;
+    width: 16px;
     float: right;
 }
 
-.knt-area-js-icon {
-    background-image: url(../images/js.png);
-    height: 41px;
-    width: 32px;
-    float: left;
-}
-
-.knt-area-html-icon {
-    background-image: url(../images/html.png);
-    height: 41px;
-    width: 32px;
-    float: left;
-}
-
-.knt-area-css-icon {
-    background-image: url(../images/css.png);
-    height: 41px;
-    width: 32px;
-    float: left;
-}
-
-.knt-area-silverlight-icon {
-    background-image: url(../images/silverlight.png);
-    height: 31px;
-    width: 31px;
-    float: left;
-}
-
-.knt-area-webapi-icon {
-    background-image: url(../images/webapi.png);
+.knt-dashboard-icon {
     height: 42px;
-    width: 54px;
     float: left;
 }
 
-.knt-area-aspnet-icon {
-    background-image: url(../images/aspnet.png);
-    height: 42px;
-    width: 130px;
-    float: left;
-}
+    .knt-dashboard-icon.knt-js-icon {
+        background-position: -228px 0px;
+        width: 32px;
+    }
+
+    .knt-dashboard-icon.knt-html-icon {
+        background-position: -192px 0px;
+        width: 32px;
+    }
+
+    .knt-dashboard-icon.knt-css-icon {
+        background-position: -263px 0px;
+        width: 32px;
+    }
+
+    .knt-dashboard-icon.knt-silverlight-icon {
+        background-position: -300px 0px;
+        width: 43px;
+    }
+
+    .knt-dashboard-icon.knt-webapi-icon {
+        background-position: -132px 0px;
+        width: 54px;
+    }
+
+    .knt-dashboard-icon.knt-aspnet-icon {
+        width: 130px;
+    }
 
 .knt-area {
     min-height: 30px;
     color: white;
-    border: 3px solid white;
+    border: 1px solid lightgray;
 }
 
     .knt-area:hover {
