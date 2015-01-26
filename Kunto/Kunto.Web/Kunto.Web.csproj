@@ -110,6 +110,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="App_Browsers\Nexus.browser" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -150,6 +151,7 @@
     <Content Include="Views\ASPNET\_RequestResponseProperties.cshtml" />
     <Content Include="Views\Dashboards\_Technical.cshtml" />
     <Content Include="Views\ASPNET\Samples.cshtml" />
+    <Content Include="Views\ASPNET\Browser.cshtml" />
     <None Include="Views\ASPNET\Modules.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

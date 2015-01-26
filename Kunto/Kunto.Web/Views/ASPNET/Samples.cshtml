@@ -6,6 +6,7 @@
         <li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#id-aspnet-lifecycle-events">Life Cycle Events</a></li>
         <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-request-properties">Request/Response Properties</a></li>
         <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-default-modules">Default Modules</a></li>
+        <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-browser-capabilities">Browser Capabilities</a></li>
     </ul>
 
     <div class="tab-content">
@@ -16,7 +17,10 @@
             @Html.Partial("~/Views/ASPNET/_RequestResponseProperties.cshtml")
         </div>
         <div role="tabpanel" class="tab-pane" id="id-aspnet-default-modules">
-             @Html.Action("Modules", "ASPNET")
+            @Html.Action("Modules", "ASPNET")
+        </div>
+        <div  role="tabpanel" class="tab-pane" id="id-aspnet-browser-capabilities">
+            @Html.Partial("~/Views/ASPNET/Browser.cshtml")
         </div>
     </div>
 </div>
