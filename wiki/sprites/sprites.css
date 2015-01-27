@@ -1,0 +1,58 @@
+.aspnet, .webapi, .html, .js, .css, .silverlight, .guru, .star, .aspnetmvc{
+	background: url(sprites.png) no-repeat;
+}
+
+.aspnet{
+	background-position: 0 0;
+	width: 130px;
+	height: 42px;
+}
+
+.webapi{
+	background-position: -132px 0;
+	width: 54px;
+	height: 42px;
+}
+
+.html{
+	background-position: -191px 0;
+	width: 33px;
+	height: 42px;
+}
+
+.js{
+	background-position: -228px 0;
+	width: 32px;
+	height: 41px;
+}
+
+.css{
+	background-position: -263px 0;
+	width: 33px;
+	height: 42px;
+}
+
+.silverlight{
+	background-position: -301px 0;
+	width: 42px;
+	height: 42px;
+}
+
+.guru{
+	background-position: 0 -43px ;
+	width: 32px;
+	height: 32px;
+}
+
+.star{
+	background-position: 0 -76px ;
+	width: 16px;
+	height: 16px;
+}
+
+.aspnetmvc{
+	background-position: -348px 0;
+	width: 180px;
+	height: 42px;
+}
+
