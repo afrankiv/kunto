@@ -22,7 +22,7 @@ namespace Kunto.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            // routes.Add(new Route("handler/{*path}", new CustomRouteHandler { HandlerType = typeof(DayOfWeekHandler) }));
+            //routes.Add(new Route("handler/{*path}", new CustomRouteHandler { HandlerType = typeof(DayOfWeekHandler) }));
             routes.MapRoute("Default", "{controller}/{action}/{id}", 
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional });
         }
