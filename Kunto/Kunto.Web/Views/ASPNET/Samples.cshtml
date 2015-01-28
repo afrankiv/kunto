@@ -7,6 +7,8 @@
         <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-request-properties">Request/Response Properties</a></li>
         <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-default-modules">Default Modules</a></li>
         <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-browser-capabilities">Browser Capabilities</a></li>
+        <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-statedata">State Data</a></li>
+        <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-registration">Session State</a></li>
     </ul>
 
     <div class="tab-content">
@@ -21,6 +23,12 @@
         </div>
         <div  role="tabpanel" class="tab-pane" id="id-aspnet-browser-capabilities">
             @Html.Partial("~/Views/ASPNET/Browser.cshtml")
+        </div>
+        <div role="tabpanel" class="tab-pane" id="id-aspnet-statedata">
+            @Html.Action("StateData", "ASPNET")
+        </div>
+         <div role="tabpanel" class="tab-pane" id="id-aspnet-registration">
+             @Html.Action("Registration", "ASPNET")
         </div>
     </div>
 </div>
