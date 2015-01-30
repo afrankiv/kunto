@@ -168,6 +168,8 @@
     <Content Include="Views\ASPNET\Samples.cshtml" />
     <Content Include="Views\ASPNET\Browser.cshtml" />
     <Content Include="Views\ASPNET\CompleteForm.cshtml" />
+    <Content Include="Views\ASPNET\CacheData.cshtml" />
+    <Content Include="Views\ASPNET\CachingContent.cshtml" />
     <None Include="Views\ASPNET\Modules.cshtml" />
     <Content Include="Views\ASPNET\StateData.cshtml" />
     <Content Include="Views\ASPNET\Registration.cshtml" />

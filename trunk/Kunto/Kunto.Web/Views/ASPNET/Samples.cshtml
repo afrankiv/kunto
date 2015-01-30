@@ -9,6 +9,8 @@
         <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-browser-capabilities">Browser Capabilities</a></li>
         <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-statedata">State Data</a></li>
         <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-registration">Session State</a></li>
+        <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-cache">Cache Data</a></li>
+        <li role="presentation"><a role="tab" data-toggle="tab" href="#id-aspnet-cachecontent">Cache Content</a></li>
     </ul>
 
     <div class="tab-content">
@@ -27,8 +29,14 @@
         <div role="tabpanel" class="tab-pane" id="id-aspnet-statedata">
             @Html.Action("StateData", "ASPNET")
         </div>
-         <div role="tabpanel" class="tab-pane" id="id-aspnet-registration">
-             @Html.Action("Registration", "ASPNET")
+        <div role="tabpanel" class="tab-pane" id="id-aspnet-registration">
+            @Html.Action("Registration", "ASPNET")
+        </div>
+        <div role="tabpanel" class="tab-pane" id="id-aspnet-cache">
+            @Html.Action("CacheData", "ASPNET")
+        </div>
+        <div role="tabpanel" class="tab-pane" id="id-aspnet-cachecontent">
+             @Html.Action("CachingContent", "ASPNET")
         </div>
     </div>
 </div>

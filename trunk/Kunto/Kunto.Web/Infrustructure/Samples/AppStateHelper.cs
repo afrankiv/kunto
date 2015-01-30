@@ -18,7 +18,11 @@ namespace Kunto.Web.Infrustructure.Samples
 
         /// <summary>
         /// </summary>
-        LAST_REQUEST_URL
+        LAST_REQUEST_URL, 
+
+        /// <summary>
+        /// </summary>
+        INDEX_COUNTER
     };
 
     /// <summary>
@@ -65,6 +69,19 @@ namespace Kunto.Web.Infrustructure.Samples
 
             appState.UnLock();
             return results;
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="key">
+        /// </param>
+        /// <returns>
+        /// </returns>
+        public static int IncrementAndGet(AppStateKeys key)
+        {
+            string keyString = Enum.GetName(typeof(AppStateKeys), key);
+            HttpApplicationState state = HttpContext.Current.Application;
+            return (int)(state[keyString] = (int)(state[keyString] ?? 0) + 1);
         }
 
         /// <summary>
