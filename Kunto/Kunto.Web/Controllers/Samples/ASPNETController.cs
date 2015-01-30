@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Web.Mvc;
+using System.Web.UI;
 
 using Kunto.Web.Infrustructure.Samples;
 
@@ -12,6 +17,31 @@ namespace Kunto.Web.Controllers.Samples
     public class ASPNETController : Controller
     {
         #region Public Methods and Operators
+
+        /// <summary>
+        /// </summary>
+        /// <returns>
+        /// </returns>
+        public ActionResult CacheData()
+        {
+            return this.View((long?)this.HttpContext.Cache["pageLength"]);
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <returns>
+        /// </returns>
+        [OutputCache(Duration = 30, Location = OutputCacheLocation.Server)]
+        public ActionResult CachingContent()
+        {
+            Thread.Sleep(1000);
+
+            int counterValue = AppStateHelper.IncrementAndGet(AppStateKeys.INDEX_COUNTER);
+
+            Debug.WriteLine(string.Format("INDEX_COUNTER: {0}", counterValue));
+
+            return View(counterValue);
+        }
 
         /// <summary>
         /// </summary>
@@ -81,6 +111,17 @@ namespace Kunto.Web.Controllers.Samples
                         modules[x].GetType().Name)).OrderBy(x => x.Item1).ToArray();
 
             return View(data);
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <returns>
+        /// </returns>
+        public async Task<ActionResult> PopulateCache()
+        {
+            HttpResponseMessage result = await new HttpClient().GetAsync("http://apress.com");
+            this.HttpContext.Cache["pageLength"] = result.Content.Headers.ContentLength;
+            return this.RedirectToAction("CacheData");
         }
 
         /// <summary>
