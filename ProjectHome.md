@@ -1,0 +1,1 @@
+Web application that contains implementations for training tasks
