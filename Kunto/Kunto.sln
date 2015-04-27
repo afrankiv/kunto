@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kunto.Web", "Kunto.Web\Kunto.Web.csproj", "{436F3802-70A9-43DF-86C2-B274C12B936B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kunto.DataAccess", "Kunto.DataAccess\Kunto.DataAccess.csproj", "{ACA050F0-AA43-4E83-928A-31BA8A9779C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kunto.BusinessLogic", "Kunto.BusinessLogic\Kunto.BusinessLogic.csproj", "{24EDB245-B86B-4AE9-A91C-D837EE664588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kunto.ConsoleClient", "Kunto.Console\Kunto.ConsoleClient.csproj", "{74BFAEF3-12B4-4E90-9128-3A1B525346DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{24EDB245-B86B-4AE9-A91C-D837EE664588}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24EDB245-B86B-4AE9-A91C-D837EE664588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24EDB245-B86B-4AE9-A91C-D837EE664588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74BFAEF3-12B4-4E90-9128-3A1B525346DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74BFAEF3-12B4-4E90-9128-3A1B525346DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74BFAEF3-12B4-4E90-9128-3A1B525346DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74BFAEF3-12B4-4E90-9128-3A1B525346DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
