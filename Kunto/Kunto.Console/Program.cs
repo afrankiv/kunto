@@ -18,7 +18,13 @@ namespace Kunto.ConsoleClient
 
             //new UsingThreadPool().StartThreadInThreadPool();
             //new UsingTasks().StartTask();
-            new UsingTasks().StartGenericTaskInDiffModes();
+            // new UsingTasks().StartTasksUsingFactory();
+            //new UsingTasks().StartMultipleTasksAndWaitAll();
+
+            //var content = new UsingAsyncAwait().GetHtmlFromWebSite("http://www.microsoft.com/").Result;
+            //Console.WriteLine(content);
+
+            new UsingPLINQ().DisplayDigitsParallelAsOrder();
         }
 
         private static void stratThreadInMain()

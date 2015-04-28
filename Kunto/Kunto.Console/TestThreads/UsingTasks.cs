@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Kunto.ConsoleClient.TestThreads
@@ -30,21 +31,13 @@ namespace Kunto.ConsoleClient.TestThreads
 
         public void StartGenericTasks()
         {
-            Task<int> task = Task.Run(() => { return 42; });
+            Task<int> task = Task.Run(() => 42);
             Console.WriteLine(task.Result);
         }
 
         public void StartGenericTasksAndContinueWith()
         {
-            Task<int> task = Task.Run(
-                () =>
-                {
-                    return 42;
-                }).ContinueWith(
-                (handledTask) =>
-                {
-                    return handledTask.Result * 2;
-                });
+            Task<int> task = Task.Run(() => 42).ContinueWith(handledTask => handledTask.Result * 2);
             Console.WriteLine(task.Result);
         }
 
@@ -57,12 +50,77 @@ namespace Kunto.ConsoleClient.TestThreads
         {
             Task<int> task = Task.Run(() => 42);
 
-            task.ContinueWith((i) => Console.WriteLine("Canceled"), TaskContinuationOptions.OnlyOnCanceled);
-            
-            task.ContinueWith((i) => Console.WriteLine("Faulted"), TaskContinuationOptions.OnlyOnFaulted);
+            task.ContinueWith(i => Console.WriteLine("Canceled"), TaskContinuationOptions.OnlyOnCanceled);
 
-            var completedTask = task.ContinueWith((i) => Console.WriteLine("Completed"), TaskContinuationOptions.OnlyOnRanToCompletion);
+            task.ContinueWith(i => Console.WriteLine("Faulted"), TaskContinuationOptions.OnlyOnFaulted);
+
+            var completedTask = task.ContinueWith(i => Console.WriteLine("Completed"), TaskContinuationOptions.OnlyOnRanToCompletion);
             completedTask.Wait();
+        }
+
+        /// <summary>
+        /// A TaskFactory is created with a certain configuration and can then be used to create Tasks with that configuration.
+        /// </summary>
+        public void StartTasksUsingFactory()
+        {
+            Task<Int32[]> parent = Task.Run(() =>
+            {
+                var results = new Int32[3];
+
+                var taskFactory = new TaskFactory(
+                    TaskCreationOptions.AttachedToParent,
+                    TaskContinuationOptions.ExecuteSynchronously);
+
+                taskFactory.StartNew(() => results[0] = 0);
+                taskFactory.StartNew(() => results[1] = 1);
+                taskFactory.StartNew(() => results[2] = 2);
+
+                return results;
+            });
+
+            var finalTask = parent.ContinueWith(
+            parentTask =>
+            {
+                foreach (int i in parentTask.Result)
+                {
+                    Console.WriteLine(i);
+                }
+            });
+
+            finalTask.Wait();
+        }
+
+        /// <summary>
+        /// Use the method WaitAll to wait for multiple Tasks to finish before continuing execution.
+        /// </summary>
+        public void StartMultipleTasksAndWaitAll()
+        {
+            Console.WriteLine("Test Start!");
+            var tasks = new Task[3];
+
+            tasks[0] = Task.Run(() =>
+            {
+                Thread.Sleep(1000);
+                Console.WriteLine("1");
+                return 1;
+            });
+
+            tasks[1] = Task.Run(() =>
+            {
+                Thread.Sleep(1000);
+                Console.WriteLine("2");
+                return 2;
+            });
+
+            tasks[2] = Task.Run(() =>
+            {
+                Thread.Sleep(1000);
+                Console.WriteLine("3");
+                return 3;
+            });
+            
+            Task.WaitAll(tasks);
+            Console.WriteLine("Test End!");
         }
     }
 }
