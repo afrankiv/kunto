@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 
+using Kunto.ConsoleClient.DelegatesAndEvents;
 using Kunto.ConsoleClient.Threads;
 
 namespace Kunto.ConsoleClient
@@ -26,7 +27,17 @@ namespace Kunto.ConsoleClient
 
             // new UsingPLINQ().TestAggregatedExceptions();
 
-            new UsingConcurrentCollections().TestConccurentBag();
+            //new UsingConcurrentCollections().TestConccurentBag();
+
+            //new DelegatesSample().UseDelegate();
+            // new DelegatesSample().UseMulticatingDelegates();
+
+            // new LambdaSample().SimpleLambda();
+            //new LambdaSample().UseFunctionDelegate();
+
+            //new EventsSample().SimulateEventViaDelegate();
+
+            new EventsFinalSample().CreateAndRaise();
         }
 
         private static void stratThreadInMain()

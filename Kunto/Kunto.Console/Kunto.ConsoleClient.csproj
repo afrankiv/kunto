@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DelegatesAndEvents\DelegatesSample.cs" />
+    <Compile Include="DelegatesAndEvents\EventsFinalSample.cs" />
+    <Compile Include="DelegatesAndEvents\EventsSample.cs" />
+    <Compile Include="DelegatesAndEvents\LambdaSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Threads\GenericThreadLocal.cs" />
