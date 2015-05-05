@@ -44,12 +44,13 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestThreads\GenericThreadLocal.cs" />
-    <Compile Include="TestThreads\UsingAsyncAwait.cs" />
-    <Compile Include="TestThreads\UsingPLINQ.cs" />
-    <Compile Include="TestThreads\UsingTasks.cs" />
-    <Compile Include="TestThreads\ThreadStaticAttr.cs" />
-    <Compile Include="TestThreads\UsingThreadPool.cs" />
+    <Compile Include="Threads\GenericThreadLocal.cs" />
+    <Compile Include="Threads\UsingAsyncAwait.cs" />
+    <Compile Include="Threads\UsingConcurrentCollections.cs" />
+    <Compile Include="Threads\UsingPLINQ.cs" />
+    <Compile Include="Threads\UsingTasks.cs" />
+    <Compile Include="Threads\ThreadStaticAttr.cs" />
+    <Compile Include="Threads\UsingThreadPool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

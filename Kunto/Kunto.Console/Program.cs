@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-using Kunto.ConsoleClient.TestThreads;
+using Kunto.ConsoleClient.Threads;
 
 namespace Kunto.ConsoleClient
 {
@@ -24,7 +24,9 @@ namespace Kunto.ConsoleClient
             //var content = new UsingAsyncAwait().GetHtmlFromWebSite("http://www.microsoft.com/").Result;
             //Console.WriteLine(content);
 
-            new UsingPLINQ().DisplayDigitsParallelAsOrder();
+            // new UsingPLINQ().TestAggregatedExceptions();
+
+            new UsingConcurrentCollections().TestConccurentBag();
         }
 
         private static void stratThreadInMain()

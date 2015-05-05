@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Kunto.ConsoleClient.TestThreads
+namespace Kunto.ConsoleClient.Threads
 {
     /// <summary>
     /// Executing a Task on another thread makes sense only if you want to keep the user interface thread

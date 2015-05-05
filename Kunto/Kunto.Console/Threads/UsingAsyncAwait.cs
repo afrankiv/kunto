@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Kunto.ConsoleClient.TestThreads
+namespace Kunto.ConsoleClient.Threads
 {
     public class UsingAsyncAwait
     {
