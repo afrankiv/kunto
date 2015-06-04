@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html ng-app="myAppName">
+<head>
+    <title>Using Directives and Data Binding</title>
+</head>
+    <body>
+        <div>
+            <div ng-view="">
+                <!--Placeholders for views-->
+            </div>    
+        </div>
+        <script src="scripts/angular.min.js"></script>
+        <script src="scripts/angular-route.min.js"></script>
+
+        <script>
+            var app = angular.module('myAppName', ['ngRoute']);
+
+            app.config(function ($routeProvider) {
+                $routeProvider
+                    .when('/',
+                        {
+                            controller: 'FirstCtrl',
+                            templateUrl: 'partials/View1.html'
+                        })
+                    .when('/view2',
+                        {
+                            controller: 'FirstCtrl',
+                            templateUrl: 'partials/View2.html'
+                        })
+                    .otherwise({ redirectTo: '/' })
+            });
+
+            app.controller('FirstCtrl', function ($scope) {
+                // data with array
+                $scope.customers = [
+                    { name: 'Andrii Frankiv', city: 'Lviv' },
+                    { name: 'John Doe', city: 'Rivne' },
+                    { name: 'Jane Doe', city: 'Kiev' }
+                ];
+
+                // function handler
+                $scope.addCustomer = function () {
+                    $scope.customers.push(
+                        {
+                            name: $scope.newCustomer.name,
+                            city: $scope.newCustomer.city
+                        })
+
+                }
+            });
+        </script>
+    </body>
+</html>
